@@ -54,16 +54,3 @@
 3. **Chạy game:**  
    (Thêm hướng dẫn chạy game, ví dụ: `python main.py` hoặc mở file thực thi)
 
----
-
-## Đóng góp
-Bạn có thể đóng góp bằng cách tạo pull request hoặc mở issue mới để báo cáo lỗi/đề xuất tính năng.
-
----
-
-## License
-(Danh mục license nếu có)
-
----
-
-**Chúc bạn chơi game vui vẻ!**
