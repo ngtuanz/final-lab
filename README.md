@@ -53,4 +53,14 @@
    (Thêm hướng dẫn cài đặt nếu có sử dụng framework hoặc thư viện)
 3. **Chạy game:**  
    (Thêm hướng dẫn chạy game, ví dụ: `python main.py` hoặc mở file thực thi)
-
+   
+**MENU**
+![](media/image1.png)
+**MAIN**
+![](media/image2.png)
+**OPTION**
+![](media/image3.png)
+**LOSE**
+![](media/image4.png)
+**BOSS**
+![](media/image5.png)
