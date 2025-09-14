@@ -9,6 +9,8 @@ public class Player : MonoBehaviour
     public GameObject doubleBulletPrefab;
     public Transform firePoint;
     public float bulletSpeed = 10f, fireRate = 0.3f;
+    public Joystick joystick;
+    
 
     Rigidbody2D rb;
     private bool hasDoubleShot = false;
@@ -32,7 +34,20 @@ public class Player : MonoBehaviour
     {
         if (!canControl) return;
 
-        Vector2 dir = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
+        // Lấy input từ joystick
+        float h = joystick.Horizontal;
+        float v = joystick.Vertical;
+
+        Vector2 dir = new Vector2(h, v);
+
+        // Nếu joystick không input (h=0, v=0) thì dùng bàn phím để test luôn
+        if (dir == Vector2.zero)
+        {
+            dir = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+        }
+
+        dir = dir.normalized;
+
         Vector2 pos = rb.position + dir * moveSpeed * Time.fixedDeltaTime;
 
         if (MapBounds.Instance)
@@ -40,6 +55,7 @@ public class Player : MonoBehaviour
 
         rb.MovePosition(pos);
     }
+
 
     IEnumerator Spawn()
     {
